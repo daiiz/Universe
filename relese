@@ -1,0 +1,14 @@
+apricot.py
+Daiki Iizuka
+
+head 1 2
+get_timestamp 1
+get_extension 1
+get_project_name 1
+mkdir 1
+nobr 1
+initfile 1 2
+publish 1
+merge 2
+main 1 2
+foot 1
