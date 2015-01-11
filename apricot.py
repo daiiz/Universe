@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
+# Copyright 2015 Daiki Iizuka. All Rights Reserved.
 ## apricot.py (relese-build)
-## Copyright 2015 Daiki Iizuka. All Rights Reserved.
 
 ## head-2.py
 ## Generated in 2015-01-10 00:28:20.
@@ -130,8 +130,8 @@ def merge(paths, outfile, copyright, comment_head, edition):
     # 通常のコメントヘッダ形式にする
     normal_comment_head = comment_head[0:len(comment_head)/2]
     out_f.write(normal_comment_head + " -*- coding: utf-8 -*-\n")
-    out_f.write(comment_head + outfile + ' (' + edition + '-build)\n')
-    out_f.write(comment_head + copyright + '\n')
+    out_f.write(normal_comment_head + ' ' + copyright + '\n')
+    out_f.write(comment_head + outfile + ' (' + edition + '-build)\n\n')
     print "Merging...\n"
     for path in paths:
         if(os.path.exists(path) is True):
@@ -179,7 +179,7 @@ def main():
             author = nobr(txts[1])
             #TODO: get year
             year = "2015"
-            copyright = 'Copyright {} {}. All Rights Reserved.\n'.format(year, author)
+            copyright = 'Copyright {} {}. All Rights Reserved.'.format(year, author)
             # マージするファイルのパスを収集する
             paths = []
             for i in range(3, len(txts)):

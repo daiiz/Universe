@@ -12,8 +12,8 @@ def merge(paths, outfile, copyright, comment_head, edition):
     # 通常のコメントヘッダ形式にする
     normal_comment_head = comment_head[0:len(comment_head)/2]
     out_f.write(normal_comment_head + " -*- coding: utf-8 -*-\n")
-    out_f.write(comment_head + outfile + ' (' + edition + '-build)\n')
-    out_f.write(comment_head + copyright + '\n')
+    out_f.write(normal_comment_head + ' ' + copyright + '\n')
+    out_f.write(comment_head + outfile + ' (' + edition + '-build)\n\n')
     print "Merging...\n"
     for path in paths:
         if(os.path.exists(path) is True):

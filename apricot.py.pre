@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # Copyright 2015 Daiki Iizuka. All Rights Reserved.
-
+## apricot.py (relese-build)
+## head-2.py
+## Generated in 2015-01-10 00:28:20.
 import sys
 import os
 import datetime
@@ -13,12 +15,16 @@ apricot_comment_style = {
     "default": "//// "
 }
 
+## get_timestamp-1.py
+## Generated in 2015-01-09 23:26:30.
 
 def get_timestamp():
     now = datetime.datetime.now()
     #now.strftime("%Y/%m/%d %H:%M:%S")
     return "{0:%Y-%m-%d %H:%M:%S}".format(now)
 
+## get_extension-1.py
+## Generated in 2015-01-09 23:26:38.
 
 def get_extension(file_name):
     # file_name: 拡張子付きのファイル名
@@ -26,6 +32,8 @@ def get_extension(file_name):
     extension = names[-1]
     return extension
 
+## get_project_name-1.py
+## Generated in 2015-01-09 23:26:47.
 
 def get_project_name(file_name):
     # file_name: 拡張子付きのファイル名
@@ -38,6 +46,8 @@ def get_project_name(file_name):
     project_name = project_name[:-1]
     return project_name
 
+## mkdir-1.py
+## Generated in 2015-01-09 23:27:01.
 
 def mkdir(relative_path):
     # カウントディレクトリにフォルダを作る
@@ -45,6 +55,8 @@ def mkdir(relative_path):
         os.mkdir(relative_path)
         print "Initialized '/"+ relative_path +"'."
 
+## nobr-1.py
+## Generated in 2015-01-09 23:27:08.
 
 def nobr(str):
     # 文字列の末尾から改行コードを取り除く
@@ -52,6 +64,8 @@ def nobr(str):
     if(str[-1] == '\r'): str = str[:-1] 
     return str
 
+## initfile-2.py
+## Generated in 2015-01-10 00:13:28.
 
 def initfile(project_name, extension, comment_head):
     # 最新のバージョンナンバーを取得する
@@ -77,6 +91,8 @@ def initfile(project_name, extension, comment_head):
     newfile.close()
     print "Created '{}/{}'.".format(project_name, fl_name)
 
+## publish-1.py
+## Generated in 2015-01-10 00:37:38.
 
 def publish(maerged_file_path, comment_head):
     # マージされたファイルから、apricotコメントヘッダを除去する
@@ -99,6 +115,8 @@ def publish(maerged_file_path, comment_head):
         fl.close()
     print "Published '{}'.".format(prefix+maerged_file_path)
 
+## merge-2.py
+## Generated in 2015-01-09 23:56:13.
 
 def merge(paths, outfile, copyright, comment_head, edition):
     # マージしたファイル数
@@ -126,6 +144,8 @@ def merge(paths, outfile, copyright, comment_head, edition):
     print "------"
     print "Merged {} files as {}.".format(num, outfile)
 
+## main-2.py
+## Generated in 2015-01-10 00:52:05.
 def main():
     argvs = sys.argv
     # 引数からコマンド情報を取得する
@@ -181,6 +201,8 @@ def main():
     print ''
 print ''
 
+## foot-1.py
+## Generated in 2015-01-09 23:27:48.
 
 if __name__ == '__main__':
     main()

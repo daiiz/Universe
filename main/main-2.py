@@ -32,7 +32,7 @@ def main():
             author = nobr(txts[1])
             #TODO: get year
             year = "2015"
-            copyright = 'Copyright {} {}. All Rights Reserved.\n'.format(year, author)
+            copyright = 'Copyright {} {}. All Rights Reserved.'.format(year, author)
             # マージするファイルのパスを収集する
             paths = []
             for i in range(3, len(txts)):
