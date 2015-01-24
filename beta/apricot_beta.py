@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright 2015 daiz. All Rights Reserved.
-# apricot version 0.0.3
+# apricot version 0.0.4
 
 import sys
 import os
