@@ -163,7 +163,7 @@ def main():
         cmds = task.split("-")
         task = cmds[0]
         mail = cmds[1]
-        print "Do you want to receive an e-mail to {}@gmai.com when the build is completed? (0 or 1)".format(mail)
+        print "Do you want to receive an e-mail to {}@gmail.com when the build is completed? (0 or 1)".format(mail)
         n = int(raw_input())
         if(n == 1):
             mail_flag = 1
